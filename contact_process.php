@@ -1,6 +1,6 @@
 <?php
 
-    $to = "neerajb@sfu.ca";
+    $to = "contact@lumbo.ca";
     $from = $_REQUEST['email'];
     $name = $_REQUEST['name'];
     $subject = $_REQUEST['subject'];
