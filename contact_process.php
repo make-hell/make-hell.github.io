@@ -1,6 +1,6 @@
 <?php
 
-    $to = "contact@lumbo.ca";
+    $to = "contact@neerajbansal.ca";
     $from = $_REQUEST['email'];
     $name = $_REQUEST['name'];
     $subject = $_REQUEST['subject'];
@@ -13,7 +13,7 @@
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-    $subject = "You have a message from your Lumbo Website";
+    $subject = "You have a message from your Website";
 
     $logo = 'img/logo.png';
     $link = '#';
