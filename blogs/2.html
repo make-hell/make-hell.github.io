@@ -54,21 +54,9 @@
                                       <nav> 
                                           <ul id="navigation">
                                               <li><a href="../index.html">Home</a></li>
-                                              <li><a href="../about.html">About</a></li>
-                                              <!-- <li><a href="../project.html">Projects</a>
-                                                  <ul class="submenu">
-                                                      <li><a href="../mechanical.html">Mechanical</a></li>
-                                                      <!--<li><a href="../electrical.html">Electrical</a></li>
-                                                      <li><a href="../embedded.html">Embedded Systems</a></li>
-                                                      <li><a href="../programming.html">Programming</a></li>
-                                                  </ul>
-                                              </li> -->
-                                              <!-- <li><a href="../contact.html">Contact</a></li> -->
+                                              <li><a href="../about.html">Portfolio</a></li>
                                           </ul>
                                       </nav>
-                                  </div>
-                                  <div class="header-right-btn f-right d-none d-xl-block ml-20">
-                                      <a href="https://github.com/neeerajb" class="btn header-btn">Github Link</a>
                                   </div>
                               </div>
                           </div>   
@@ -91,11 +79,11 @@
 					<div class="row">
 						<div class="col-xl-12">
 							<div class="hero-cap">
-								<h2>Random Tutorials</h2>
+								<h2>Getting started with ESP32</h2>
 								<nav aria-label="breadcrumb ">
 									<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-									<li class="breadcrumb-item"><a href="#">Random Tutorials</a></li> 
+									<li class="breadcrumb-item"><a href="#">Blogs</a></li> 
 									</ol>
 								</nav>
 							</div>
@@ -112,12 +100,27 @@
                <div class="col-lg-8 posts-list">
                   <div class="single-post">
                      <div class="blog_details">
-                        <h2>Check out some of the following tutorials:</h2>
-                        
-                        
-
-
-
+                        <h2>Electrical Hardware</h2>
+                        <p>
+                           This project is to show on how to use ESP32 for your Embedded System. I will be using KiCAD for designing the PCB. 
+                           If you're new to this software, please do check out this 5 min. tutorials <a style="color:rgb(240, 98, 98);" href="https://www.youtube.com/watch?v=l9b_6WLemmg&ab_channel=BuildElectronicCircuitsbyOhmify">here</a>. 
+                           If you prefer in a text mode, check out <a style="color:rgb(240, 98, 98);" href="https://docs.kicad.org/5.1/en/getting_started_in_kicad/getting_started_in_kicad.html">this page</a> by KiCAD itself.
+                        </p>
+                        <p>
+                           There are 2 parts in order to design our board. The first part is to design the schematic. Whenever we need to design a circuit for a microcontroller, a datasheet is your best friend and you should know them in and out.
+                           There is usually a hardware design reference given by the manufacturer. The following image represents the recommended hardware design for ESP32 taken from its <a style="color:rgb(240, 98, 98);" href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf">datasheet</a>.
+                           <img style="width: 100%;" src="../assets/img/blog/2/schematic.png">
+                        </p>
+                        <p>
+                           I'll explain the reason of having resistors and capacitors in the schematic. The Capacitor C1 and C2 are power capacitors and are used to provide a stable power to the microcontroller. 
+                           R1 and C3 are used for filtering any noise at the enable pin. The JTAG is used to program the microcontroller but you can also use UART for that via USB. 
+                           A computer sends RS-232 serial communication over USB, so we use a RS-232 to UART convertor. I will be using CP2104 for the serial conversion.
+                           Below is the schematic to integrate it with microcontroller. And finally, a boot button for which connects Pin 25 (IO0) with Ground.
+                           <img style="width: 100%;" src="../assets/img/blog/2/serial.png">
+                        </p>
+                        <p>
+                           <h3>PCB Layout Designing coming soon</h3>
+                        </p>
                         <!-- <h5>MORE INFORMATION COMING SOON</h5> -->
                      </div>
                   </div>
