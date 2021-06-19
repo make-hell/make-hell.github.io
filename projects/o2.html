@@ -60,8 +60,8 @@
         <ul>
           <li><a href="../index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="../index.html#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="../index.html#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="../index.html#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+          <li><a href="../index.html#resume"><i class="bx bx-file-blank"></i> <span>Work Experience</span></a></li>
+          <li><a href="../index.html#portfolio"><i class="bx bx-book-content"></i> Projects</a></li>
           <!-- <li><a href="../index.html#services"><i class="bx bx-server"></i> Services</a></li> -->
           <li><a href="../index.html#contact"><i class="bx bx-envelope"></i> Contact</a></li>
 
@@ -79,7 +79,7 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Useful Learning Links</h2>
+          <h2>How to launch your website with Github pages</h2>
           <ol>
             <li><a href="../index.html">Home</a></li>
             <li>Other</li>
@@ -91,14 +91,50 @@
 
     <section class="inner-page">
       <div class="container">
-        <h3>Following are some tutorials which I update regularly</h3>
-        <h4>Software</h4>
+        <h3>Follow the steps below to publish your website in 20 minutes!!</h3>
+        <p>
+          The reason behind this page is to enable people publish their own website without much hassle. It does not involve paying someone regularly and you get access and control ovef everything.
+        </p>
+        <h4>Requirements</h4>
         <p>
           <ol>
-            <li>Python</li>
-            <li></li>
+            <li>You mush have your own HTML/CSS/JS code ready for your website</li>
+            <li>A payment method for your website</li>
           </ol>
         </p>
+        <h4>STEP 1: Setting up Github Pages</h4>
+        <p>
+          <ol>
+            <li>Create a <a href="www.github.com">Github</a> account.</li>
+            <li>Make a new Repository (I suggest to use the same name as your username, for eg. neeerajb in my case)</li>
+            <img src="../assets/img/projects/misc/website/git.png" style="height: 400px; width: auto;">
+            <li>Upload all your files. Make sure they are not inside a folder and you have your main "index.html" file outside.</li>
+            <li>Add another extra file named "CNAME" (without any extension) and write your website address(we will buy a domain in the next step).</li>
+            <li>Congratulations! Your github pages is good to go. You can check your github page at 'username.github.io' (Mine is neeerajb.github.io).</li>
+          </ol>
+        </p>
+        <h4>STEP 2: Buy a Domain</h4>
+        <p>
+          <ol>
+            <li>You can buy a domain from anywhere. I use <a href="http://www.gandi.net">Gandi.net</a> where it usually costs $20 and you get 2 free emails.</li>
+            <li>After you make an account and buy a domain, all we need to do is link the github to our domain via cloudflare.</li>
+            <li>We will be adding nameservers at the end of of Step 3.</li>
+          </ol>
+        </p>
+        <h4>STEP 3: Integration with Cloudflare</h4>
+        <p>
+          <ol>
+            <li>Create an account on <a href="http://www.cloudflare.com">Cloudflare</a> and add your site.</li>
+            <li>Click on DNS and add the following 3 rows (1st, 2nd and 4th line) by adding a record.</li>
+            <img src="../assets/img/projects/misc/website/dns.png" alt="" style="height: 400px; width: auto;">
+            <li>Please make sure to replace the name for the first 2 rows with your website name and the content for the 4th row with your github live page.</li>
+            <li>If you haven't been asked for nameservers yet, in the same DNS tab, you can find your nameservers.</li>
+            <img src="../assets/img/projects/misc/website/nameserver.png" alt="" style="height: 400px; width: auto;">
+            <li>Go back to your gandi.net account and add your external nameservers there.</li>
+            <li>Once the DNS setting and the nameservers are complete, your website should be good to go.</li>
+          </ol>
+        </p>
+        <p>P.S. I'd be more than happy to know more if you face any issues so I can update this page and help others in the process.</p>
       </div>
     </section>
 
