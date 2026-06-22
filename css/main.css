@@ -25,6 +25,7 @@ nav {
   position: sticky;
   top: 0;
   backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 .links a {
   color: white;
