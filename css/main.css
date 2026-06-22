@@ -1,0 +1,523 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Inter, sans-serif;
+  background: #050505;
+  color: white;
+  overflow-x: hidden;
+}
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -1;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 2%;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+}
+.links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 5rem;
+}
+.hero h2 {
+  color: #00e5ff;
+  height: 50px;
+}
+.btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #00e5ff;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.stats,
+.project-grid {
+  display: grid;
+  gap: 20px;
+  padding: 60px 8%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.card,
+.project,
+.timeline div {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.project:hover,
+.card:hover {
+  transform: translateY(-5px);
+}
+section h2 {
+  padding: 40px 2%;
+  font-size: 2.5rem;
+}
+.timeline {
+  padding: 0 8% 60px;
+  display: grid;
+  gap: 20px;
+}
+#projects,
+#experience,
+#education,
+#about,
+#contact {
+  padding: 20px 8%;
+}
+.experience-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.experience-card div {
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+
+  backdrop-filter: blur(10px);
+}
+/* Hover animation */
+.experience-card:hover div {
+  transform: translateY(-8px) scale(1.02);
+
+  background: rgba(0, 255, 200, 0.15);
+
+  border-color: #00ffc8;
+
+  box-shadow:
+    0 0 20px rgba(0, 255, 200, 0.5),
+    0 0 50px rgba(0, 255, 200, 0.2);
+}
+
+/* =========================
+   ENSOL PROJECT PAGE
+========================= */
+
+.project-hero {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 80px 8%;
+}
+
+.project-hero h1 {
+  font-size: 3.5rem;
+}
+
+.project-hero h2 {
+  color: #00e5ff;
+
+  margin: 15px 0;
+}
+
+.project-hero p {
+  max-width: 800px;
+
+  line-height: 1.7;
+
+  opacity: 0.8;
+
+  font-size: 1.1rem;
+}
+
+.project-sect {
+  padding: 40px 8% 80px;
+}
+
+.project-sect h2 {
+  padding: 0;
+
+  margin-bottom: 40px;
+}
+
+/* Contribution cards */
+
+.feature-grid {
+  display: grid;
+
+  gap: 25px;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(15px);
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition: 0.35s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+
+  background: rgba(0, 229, 255, 0.08);
+
+  border-color: #00e5ff;
+
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+}
+
+.icon {
+  font-size: 35px;
+
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  line-height: 1.6;
+
+  opacity: 0.8;
+}
+
+.highlight {
+  margin-top: 20px;
+
+  padding: 10px 15px;
+
+  background: rgba(0, 229, 255, 0.1);
+
+  border-left: 3px solid #00e5ff;
+
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+}
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.tags span,
+.skills span,
+.tag-container span {
+  padding: 7px 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  font-size: 0.85rem;
+
+  transition: 0.3s;
+}
+
+.tags span:hover,
+.skills span:hover,
+.tag-container span:hover {
+  background: #00e5ff;
+
+  color: black;
+}
+
+/* Devices / skills sections */
+
+.tag-container,
+.skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+.skills {
+  padding-bottom: 40px;
+}
+
+.text-image {
+  display: flex;
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content p {
+  line-height: 1.8;
+
+  opacity: 0.85;
+
+  margin-bottom: 20px;
+}
+
+.image-content {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.image-content img {
+  width: 100%;
+
+  max-width: 500px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
+
+  transition: 0.3s;
+}
+
+.image-content img:hover {
+  transform: scale(1.03);
+
+  box-shadow: 0 0 40px rgba(0, 229, 255, 0.35);
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .text-image {
+    flex-direction: column;
+  }
+}
+
+.skills-compact {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.skills-compact div {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  font-size: 0.95rem;
+}
+
+.skills-compact b {
+  color: #00e5ff;
+
+  width: 120px;
+}
+
+.skills-compact span {
+  padding: 5px 12px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  font-size: 0.85rem;
+
+  transition: 0.25s;
+}
+
+.skills-compact span:hover {
+  background: #00e5ff;
+
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .skills-compact b {
+    width: auto;
+
+    margin-right: 5px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.feature-card img {
+  width: 100%;
+
+  border-radius: 15px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact {
+  padding: 100px 10%;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-info h1 {
+  font-size: 48px;
+}
+
+.contact-info p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.contact-links a {
+  display: block;
+  margin-top: 15px;
+
+  color: white;
+  text-decoration: none;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #111;
+
+  border: 1px solid #333;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  color: white;
+
+  font-size: 16px;
+}
+
+.contact-form button {
+  background: white;
+
+  color: black;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+}
+
+/* PopUp after subbmitting the form */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: rgb(0, 0, 0);
+  padding: 30px;
+  border-radius: 12px;
+  border: 4px solid rgba(255, 255, 255, 0.557);
+  text-align: center;
+  max-width: 500px;
+  animation: popupShow 0.3s ease;
+}
+
+.popup-content h3 {
+  margin-bottom: 10px;
+}
+
+.close-popup {
+  position: relative;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+@keyframes popupShow {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

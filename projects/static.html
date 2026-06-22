@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StaticIP | Neeraj Bansal</title>
+
+<link rel="stylesheet" href="../css/main.css">
+
+<style>
+
+/* Project-specific styling */
+
+.workflow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:40px;
+}
+
+.step{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:25px;
+    width:180px;
+    text-align:center;
+    backdrop-filter:blur(15px);
+    transition:.3s;
+}
+
+.step:hover{
+    transform:translateY(-5px);
+    border-color:#00e5ff;
+    box-shadow:0 0 20px rgba(0,229,255,.2);
+}
+
+.step div{
+    font-size:2rem;
+    color:#00e5ff;
+    margin-bottom:10px;
+}
+
+.arrow{
+    font-size:2rem;
+    color:#00e5ff;
+}
+
+@media(max-width:800px){
+
+    .workflow{
+        flex-direction:column;
+    }
+
+    .arrow{
+        transform:rotate(90deg);
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="grid-bg"></div>
+
+    <nav>
+      <div class="logo"><a href="../index.html#home">Neeraj Bansal</a></div>
+      <div class="links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+
+
+
+<section class="project-hero">
+
+    <h1>StaticIP</h1>
+
+    <h2>Network Configuration Automation Tool</h2>
+
+    <p>
+        A Windows utility that automatically restores static IP
+        configurations based on network adapter MAC addresses,
+        eliminating repetitive manual setup and reducing deployment errors.
+    </p>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<div class="text-image">
+
+    <div class="text-content">
+
+        <h2>Project Overview</h2>
+
+        <p>
+            StaticIP was developed to solve a common networking problem:
+            Windows often creates new network interfaces after hardware
+            changes, causing previously assigned static IP addresses
+            to be lost.
+        </p>
+
+        <p>
+            Instead of manually reconfiguring each adapter, StaticIP
+            automatically identifies network interfaces using their
+            MAC addresses and applies the correct IP configuration.
+        </p>
+
+        <p>
+            This approach significantly reduces deployment time,
+            prevents configuration mistakes, and provides a repeatable
+            networking setup for industrial and enterprise environments.
+        </p>
+
+    </div>
+
+    <div class="image-content">
+
+        <img src="../assets/static1.png"
+             alt="StaticIP Network Automation Tool">
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<h2>Key Features</h2>
+
+<div class="feature-grid">
+
+
+    <div class="feature-card">
+
+        <div class="icon">🌐</div>
+
+        <h3>Automatic IP Assignment</h3>
+
+        <p>
+            Assigns predefined static IP addresses automatically
+            using MAC address identification.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-card">
+
+        <div class="icon">🔄</div>
+
+        <h3>Adapter Recovery</h3>
+
+        <p>
+            Restores network settings when Windows creates
+            new network interfaces or renames adapters.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-card">
+
+        <div class="icon">📝</div>
+
+        <h3>Configuration Generation</h3>
+
+        <p>
+            Creates reusable configuration files from
+            existing network settings.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-card">
+
+        <div class="icon">⚡</div>
+
+        <h3>Deployment Automation</h3>
+
+        <p>
+            Eliminates repetitive manual configuration
+            during system deployment and maintenance.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<h2>How It Works</h2>
+
+<div class="workflow">
+
+    <div class="step">
+        <div>1</div>
+        <p>Scan Network Adapters</p>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+        <div>2</div>
+        <p>Read MAC Address</p>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+        <div>3</div>
+        <p>Match Configuration</p>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+        <div>4</div>
+        <p>Assign Static IP</p>
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<h2>Problem Solved</h2>
+
+<div class="feature-card">
+
+    <p>
+        In environments where multiple network adapters,
+        USB Ethernet devices, or replacement hardware are used,
+        Windows may create new network profiles and may not match with
+        existing static IP assignments.
+    </p>
+
+    <br>
+
+    <p>
+        StaticIP eliminates this issue by maintaining a persistent
+        mapping between MAC addresses and network configurations,
+        ensuring systems always receive the correct IP settings.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<h2>Technical Skills</h2>
+
+<div class="skills-compact">
+
+    <div>
+        <b>Networking:</b>
+        <span>TCP/IP</span>
+        <span>Static IP</span>
+        <span>MAC Addressing</span>
+        <span>NIC Configuration</span>
+    </div>
+
+    <div>
+        <b>System:</b>
+        <span>Windows</span>
+        <span>Automation</span>
+        <span>CLI Tools</span>
+    </div>
+
+    <div>
+        <b>Concepts:</b>
+        <span>Deployment</span>
+        <span>Configuration Management</span>
+        <span>Network Administration</span>
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<h2>GitHub Repository</h2>
+
+<a class="btn"
+href="https://github.com/make-hell/StaticIP"
+target="_blank">
+View Source Code
+</a>
+
+</section>
+
+
+</body>
+</html>

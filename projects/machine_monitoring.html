@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Industrial Machine Monitoring Platform | Neeraj Bansal</title>
+
+<link rel="stylesheet" href="../css/main.css">
+
+<style>
+
+.architecture{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:30px;
+}
+
+.arch-node{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:20px;
+    min-width:150px;
+    text-align:center;
+    transition:.3s;
+}
+
+.arch-node:hover{
+    transform:translateY(-5px);
+    border-color:#00e5ff;
+    box-shadow:0 0 25px rgba(0,229,255,.2);
+}
+
+.arch-arrow{
+    font-size:2rem;
+    color:#00e5ff;
+}
+
+.metric-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.metric{
+    background:rgba(255,255,255,.05);
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.metric h3{
+    color:#00e5ff;
+    margin-bottom:10px;
+}
+
+@media(max-width:800px){
+
+    .architecture{
+        flex-direction:column;
+    }
+
+    .arch-arrow{
+        transform:rotate(90deg);
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+   <div class="grid-bg"></div>
+
+    <nav>
+      <div class="logo"><a href="../index.html#home">Neeraj Bansal</a></div>
+      <div class="links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+
+
+
+<section class="project-hero">
+
+    <h1>Industrial Machine Monitoring Platform</h1>
+
+    <h2>AWS • Laravel • Raspberry Pi • Industrial IoT</h2>
+
+    <p>
+        Designed and developed a cloud-based Industrial IoT platform
+        that collects machine data through Raspberry Pi devices,
+        stores it in AWS, and provides real-time analytics through
+        a Laravel web dashboard.
+    </p>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<div class="text-image">
+
+    <div class="text-content">
+
+        <h2>Project Overview</h2>
+
+        <p>
+            This project was developed to automate machine monitoring
+            and production tracking. Industrial machine signals were
+            captured using Raspberry Pi edge devices and transmitted
+            to AWS cloud infrastructure for storage and processing.
+        </p>
+
+        <p>
+            A Laravel-based dashboard was built to calculate key
+            production metrics, display machine performance, and
+            provide operators with real-time visibility into
+            manufacturing activities.
+        </p>
+
+        <p>
+            The platform eliminated manual data collection and
+            created a centralized system for monitoring machine
+            activity and operational performance.
+        </p>
+
+    </div>
+
+    <div class="image-content">
+
+        <img src="../assets/cfauto/Dashboard.png"
+             alt="Industrial IoT Dashboard">
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<h2>Major Contributions</h2>
+
+<div class="feature-grid">
+
+
+    <div class="feature-card">
+
+        <div class="icon">📡</div>
+
+        <h3>Edge Data Collection</h3>
+
+        <p>
+            Collected machine signals using Raspberry Pi devices
+            and converted them into structured production data.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-card">
+
+        <div class="icon">☁️</div>
+
+        <h3>AWS Cloud Integration</h3>
+
+        <p>
+            Built cloud infrastructure to receive, store,
+            and process incoming machine data.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-card">
+
+        <div class="icon">📊</div>
+
+        <h3>Analytics Dashboard</h3>
+
+        <p>
+            Developed a Laravel web application to visualize
+            machine activity and production performance.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-card">
+
+        <div class="icon">⚡</div>
+
+        <h3>Real-Time Monitoring</h3>
+
+        <p>
+            Enabled live monitoring of machine status and
+            operational metrics.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-card">
+
+        <div class="icon">🗄️</div>
+
+        <h3>Data Storage</h3>
+
+        <p>
+            Stored historical production data for reporting,
+            analysis, and future decision making.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-card">
+
+        <div class="icon">🔄</div>
+
+        <h3>End-to-End System Design</h3>
+
+        <p>
+            Designed the complete workflow from machine signal
+            acquisition to cloud analytics.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<h2>System Architecture</h2>
+
+<div class="architecture">
+
+    <div class="arch-node">
+        Machine
+    </div>
+
+    <div class="arch-arrow">→</div>
+
+    <div class="arch-node">
+        Raspberry Pi
+    </div>
+
+    <div class="arch-arrow">→</div>
+
+    <div class="arch-node">
+        AWS Cloud
+    </div>
+
+    <div class="arch-arrow">→</div>
+
+    <div class="arch-node">
+        Database
+    </div>
+
+    <div class="arch-arrow">→</div>
+
+    <div class="arch-node">
+        Laravel Dashboard
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<h2>Platform Capabilities</h2>
+
+<div class="metric-grid">
+
+    <div class="metric">
+        <h3>Machine Monitoring</h3>
+        <p>Track machine activity and operational status.</p>
+    </div>
+
+    <div class="metric">
+        <h3>Production Analytics</h3>
+        <p>Calculate and visualize production metrics.</p>
+    </div>
+
+    <div class="metric">
+        <h3>Cloud Storage</h3>
+        <p>Centralized historical data management.</p>
+    </div>
+
+    <div class="metric">
+        <h3>Remote Access</h3>
+        <p>Access machine information from anywhere.</p>
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<h2>Technical Skills</h2>
+
+<div class="skills-compact">
+
+    <div>
+        <b>Cloud:</b>
+        <span>AWS</span>
+        <span>Cloud Hosting</span>
+        <span>Server Management</span>
+    </div>
+
+    <div>
+        <b>Backend:</b>
+        <span>Laravel</span>
+        <span>PHP</span>
+        <span>REST APIs</span>
+    </div>
+
+    <div>
+        <b>IoT:</b>
+        <span>Raspberry Pi</span>
+        <span>Industrial Monitoring</span>
+        <span>Data Acquisition</span>
+    </div>
+
+    <div>
+        <b>Database:</b>
+        <span>MySQL</span>
+        <span>Data Processing</span>
+    </div>
+
+    <div>
+        <b>Frontend:</b>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="project-sect">
+
+<h2>Business Impact</h2>
+
+<div class="feature-card">
+
+    <p>
+        The platform automated machine data collection and
+        provided real-time production visibility through a
+        centralized dashboard. By eliminating manual tracking,
+        it improved operational awareness and enabled
+        data-driven decision making.
+    </p>
+
+</div>
+
+</section>
+
+</body>
+</html>
